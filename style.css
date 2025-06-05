@@ -1,0 +1,245 @@
+/* Global Resets & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-bg: #1a1a2e;
+    --card-bg: #16213e;
+    --light-text: #e0e0e0;
+    --primary-blue: #007bff;
+    --accent-orange: #ff8c00;
+    --primary-font: 'Arial', sans-serif;
+    --heading-font: 'Georgia', serif;
+    --nav-height: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    padding-top: var(--nav-height);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    margin-bottom: 0.75rem;
+    color: #f4f4f4;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; color: var(--primary-blue); }
+h3 { font-size: 1.5rem; color: var(--accent-orange); }
+
+p { margin-bottom: 1rem; }
+a { color: var(--primary-blue); text-decoration: none; }
+a:hover { color: var(--accent-orange); }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #2a2a4e;
+}
+.section:last-of-type { border-bottom: none; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 0.8rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; text-align: center; }
+.btn-primary { background-color: var(--primary-blue); color: #fff; }
+.btn-primary:hover { background-color: #0056b3; color: #fff; transform: translateY(-2px); }
+.btn-secondary { background-color: var(--accent-orange); color: #fff; }
+.btn-secondary:hover { background-color: #cc7000; color: #fff; transform: translateY(-2px); }
+.btn-resume { background-color: transparent; color: var(--light-text); border: 1px solid var(--primary-blue); padding: 0.5rem 1rem; }
+.btn-resume:hover { background-color: var(--primary-blue); color: #fff; }
+
+/* Header & Navigation */
+header { background-color: rgba(22, 33, 62, 0.9); color: #fff; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); backdrop-filter: blur(5px); }
+header nav { display: flex; justify-content: space-between; align-items: center; height: var(--nav-height); }
+header .logo { font-size: 1.5rem; font-weight: bold; color: var(--light-text); }
+header .logo:hover { color: var(--accent-orange); }
+header nav ul { display: flex; }
+header nav ul li { margin-left: 20px; }
+header nav ul li a { color: var(--light-text); padding: 5px 0; position: relative; }
+header nav ul li a:hover,
+header nav ul li a.active { color: var(--accent-orange); font-weight: bold; }
+header nav ul li a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: var(--accent-orange); transition: width 0.3s ease; }
+header nav ul li a:hover::after,
+header nav ul li a.active::after { width: 100%; }
+header nav ul li a:not(.active):hover::after { width: 70%; left: 15%; }
+
+/* ADDED: Hamburger Menu Styles */
+.hamburger-menu { display: none; cursor: pointer; flex-direction: column; justify-content: space-around; width: 28px; height: 24px; }
+.hamburger-menu .line { width: 100%; height: 3px; background-color: var(--light-text); border-radius: 2px; transition: all 0.3s ease-in-out; }
+
+/* Hero Section */
+#hero { background: linear-gradient(rgba(26, 26, 46, 0.85), rgba(26, 26, 46, 0.95)), url('images/hero-background.jpg') no-repeat center center/cover; min-height: calc(100vh - var(--nav-height)); display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem 0; }
+.hero-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 4px solid var(--primary-blue); }
+.hero-content h1 { margin-bottom: 0.5rem; }
+.hero-content h2 { font-size: 1.5rem; color: var(--light-text); margin-bottom: 1rem; font-weight: normal; }
+.hero-content p { max-width: 600px; margin: 0 auto 1.5rem auto; }
+.hero-buttons .btn { margin: 0.5rem; }
+
+/* Animations */
+.animate-fade-in { opacity: 0; animation: fadeIn 0.8s ease-out forwards; }
+@keyframes fadeIn { to { opacity: 1; } }
+.animate-on-scroll, .animate-on-scroll-child { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; will-change: opacity, transform; }
+.animate-on-scroll.is-visible, .animate-on-scroll-child.is-visible { opacity: 1; transform: translateY(0); }
+
+/* About Me Section */
+.about-content { display: flex; gap: 2rem; align-items: flex-start; }
+.about-text { flex: 2; }
+
+/* Skills Section */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.skill-category { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.skill-category h3 i { margin-right: 0.5rem; color: var(--accent-orange); }
+.skill-category ul li { padding: 0.3rem 0; border-bottom: 1px solid #2a2a4e; }
+.skill-category ul li:last-child { border-bottom: none; }
+
+/* Projects Section */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.project-card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1); will-change: transform, box-shadow; }
+.project-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 10px 25px rgba(0, 50, 150, 0.2); }
+.project-card .project-image { width: 100%; object-fit: cover; border-radius: 5px; margin-bottom: 1rem; border: 1px solid #2a2a4e; transition: transform 0.35s ease; }
+.project-card:hover .project-image { transform: scale(1.05); }
+.project-card h3 { margin-bottom: 0.5rem; }
+.project-card p { font-size: 0.95rem; margin-bottom: 0.75rem; flex-grow: 1; }
+.project-card h4 { font-size: 1.1rem; color: var(--light-text); margin-top: 1rem; margin-bottom: 0.3rem; }
+.project-card ul { margin-bottom: 1rem; padding-left: 1rem; }
+.project-card ul li { list-style: disc; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.project-card .btn { margin-top: auto; }
+.project-links .btn { margin-right: 0.5rem; margin-bottom: 0.5rem; }
+
+/* ... Your other styles for Experience, Podcast, etc. remain the same ... */
+/* Experience Timeline Section */
+#experience h2 { text-align: center; margin-bottom: 3rem; }
+.experience-timeline { position: relative; max-width: 750px; margin: 0 auto; padding: 30px 0; }
+.experience-timeline::after { content: ''; position: absolute; width: 6px; background-color: var(--primary-blue); top: 0; bottom: 0; left: 50%; margin-left: -3px; z-index: 1; }
+.experience-item-container { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; box-sizing: border-box; margin-bottom: 40px; }
+.experience-item-container .timeline-bubble { content: ''; position: absolute; width: 20px; height: 20px; background-color: var(--dark-bg); border: 4px solid var(--accent-orange); top: 25px; border-radius: 50%; z-index: 2; }
+.experience-content { padding: 20px 30px; background-color: var(--card-bg); position: relative; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
+.experience-content h3 { margin-top: 0; color: var(--accent-orange); font-size: 1.3rem; }
+.experience-content .company-date { font-size: 0.9em; color: var(--primary-blue); margin-bottom: 0.75rem; font-weight: bold; }
+.experience-content ul { margin-top: 0.5rem; padding-left: 1.2rem; }
+.experience-content ul li { list-style: disc; margin-bottom: 0.4rem; font-size: 0.95em; color: var(--light-text); }
+.left-container { left: 0; }
+.left-container .timeline-bubble { right: -50px; }
+.left-container .experience-content::before { content: " "; height: 0; position: absolute; top: 28px; width: 0; z-index: 1; right: -10px; border: medium solid var(--card-bg); border-width: 10px 0 10px 10px; border-color: transparent transparent transparent var(--card-bg); }
+.right-container { left: 50%; }
+.right-container .timeline-bubble { left: -50px; }
+.right-container .experience-content::before { content: " "; height: 0; position: absolute; top: 28px; width: 0; z-index: 1; left: -10px; border: medium solid var(--card-bg); border-width: 10px 10px 10px 0; border-color: transparent var(--card-bg) transparent transparent; }
+.experience-timeline::after { content: ""; display: table; clear: both; }
+
+/* Podcast Section */
+.podcast-section h2 { text-align: center; margin-bottom: 2rem; }
+.podcast-content { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+.podcast-image { max-width: 350px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.podcast-text p { max-width: 600px; margin-left: auto; margin-right: auto; }
+.podcast-text iframe { margin-top: 1rem; max-width: 500px; }
+
+/* Achievements Section */
+.achievements-list li { padding: 0.5rem 0; border-bottom: 1px dashed #2a2a4e; }
+.achievements-list li:last-child { border-bottom: none; }
+.achievements-list i { margin-right: 0.75rem; color: var(--primary-blue); }
+
+/* Contact Section */
+#contact h2, #contact > p { text-align: center; }
+.contact-methods { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; flex-wrap: wrap; }
+.contact-link { font-size: 1.1rem; padding: 0.5rem 1rem; background-color: var(--card-bg); border-radius: 5px; transition: background-color 0.3s ease; }
+.contact-link i { margin-right: 0.5rem; }
+.contact-link:hover { background-color: var(--primary-blue); color: #fff; }
+.contact-form { max-width: 600px; margin: 2rem auto 0 auto; background-color: var(--card-bg); padding: 2rem; border-radius: 8px; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #2a2a4e; border-radius: 5px; background-color: var(--dark-bg); color: var(--light-text); }
+.contact-form textarea { resize: vertical; }
+.contact-form button[type="submit"] { width: 100%; }
+
+/* Footer */
+footer { background-color: var(--card-bg); color: var(--light-text); text-align: center; padding: 1.5rem 0; margin-top: 2rem; }
+footer p { margin-bottom: 0.3rem; }
+
+/* MODIFIED & REPLACED: Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    body { padding-top: var(--nav-height); /* Ensure correct padding */ }
+
+    /* Show the hamburger menu on mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Hide the original nav links list */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-height); /* Position it right below the header */
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    /* This class is toggled by JS to show the menu */
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: block; /* Make the whole area clickable */
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    header nav ul li a:hover,
+    header nav ul li a.active {
+        background-color: var(--primary-blue);
+        color: #fff !important; /* Use !important to override specificity if needed */
+    }
+
+    /* Remove the underline effect on mobile */
+    header nav ul li a::after {
+        display: none;
+    }
+    
+    .hero-photo { width: 150px; height: 150px; }
+    .about-content, .podcast-content { flex-direction: column; }
+    .podcast-image { max-width: 80%; }
+    .contact-methods { flex-direction: column; align-items: center; }
+
+    /* Experience Timeline Responsive */
+    .experience-timeline::after { left: 31px; }
+    .experience-item-container { width: 100%; padding-left: 70px; padding-right: 15px; margin-bottom: 30px; }
+    .left-container, .right-container { left: 0%; }
+    .experience-item-container .timeline-bubble { left: 21px; right: auto; }
+    .left-container .experience-content::before,
+    .right-container .experience-content::before {
+        left: -10px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--card-bg) transparent transparent;
+        right: auto;
+    }
+}

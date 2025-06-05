@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jahnavi Konatala | Web Developer & Python Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Added for tagline transition */
+        #dynamic-tagline-text {
+            transition: opacity 0.5s ease-in-out;
+            display: inline-block; /* Ensures transform works if you add it */
+        }
+        #dynamic-tagline-text.fade-out {
+            opacity: 0;
+        }
+        #dynamic-tagline-text.fade-in {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#hero" class="logo">Jahnavi K.</a>
+            <ul id="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#podcast" class="nav-link">Podcast</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.pdf" target="_blank" class="btn-resume">Resume</a></li>
+            </ul>
+            <!-- ADDED: Hamburger Menu Button -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <img src="images/your-photo.jpg" alt="Jahnavi Konatala" class="hero-photo animate-fade-in">
+                    <h1 class="animate-fade-in" style="animation-delay: 0.0s;">Jahnavi Sri Harshita Konatala</h1>
+                    <h2 class="animate-fade-in" style="animation-delay: 0.1s;">
+                        <span id="dynamic-tagline-text">Web Developer</span>
+                    </h2>
+                    <div class="hero-buttons animate-fade-in" style="animation-delay: 0.8s;">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="container section animate-on-scroll">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Jahnavi, a third-year B.Tech student at Shri Vishnu Engineering College For Women, specializing in Artificial Intelligence and Data Science. My core focus is on leveraging Python, Machine Learning, and Data Structures to solve real-world problems that can make a tangible impact.</p>
+                    <p>Beyond coding and algorithms, I host the Vishnu Podcast (you can catch an episode further down!), an experience that has profoundly honed my communication, research, and presentation abilities. I believe that clear communication is key to translating complex technical insights into understandable concepts. I also enjoy expressing my creativity through drawing in my free time.</p>
+                    <p>I'm driven by a desire to apply my analytical abilities and collaborative spirit to create innovative solutions in the tech world. I'm currently seeking opportunities where I can contribute to impactful projects and continue to grow as a Data Science enthusiast.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- (rest of your existing main content: Skills, Projects, Experience, etc.) -->
+        <!-- ... Paste your other sections (Skills, Projects, etc.) here ... -->
+        <!-- Skills Section -->
+        <section id="skills" class="container section animate-on-scroll">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll-child" style="animation-delay: 0.1s;">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </div>
+                <div class="skill-category animate-on-scroll-child" style="animation-delay: 0.2s;">
+                    <h3><i class="fas fa-brain"></i> Data Science & ML</h3>
+                    <ul>
+                        <li>NumPy, Pandas, Matplotlib</li>
+                        <li>Machine Learning Concepts (Regression, Classification, Clustering)</li>
+                        <li>Data Visualization Principles</li>
+                        <li>Statistical Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category animate-on-scroll-child" style="animation-delay: 0.3s;">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <ul>
+                        <li>SQLite3</li>
+                    </ul>
+                </div>
+                <div class="skill-category animate-on-scroll-child" style="animation-delay: 0.4s;">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <ul>
+                        <li>Tableau</li>
+                        <li>Git & GitHub</li>
+                        <li>MS Office Suite</li>
+                        <li>Android Studio</li>
+                    </ul>
+                </div>
+                <div class="skill-category animate-on-scroll-child" style="animation-delay: 0.5s;">
+                    <h3><i class="fas fa-comments"></i> Core Competencies</h3>
+                    <ul>
+                        <li>Problem-Solving</li>
+                        <li>Critical Thinking</li>
+                        <li>Communication (Enhanced by Podcast Hosting)</li>
+                        <li>Teamwork & Collaboration</li>
+                        <li>Adaptability</li>
+                        <li>Public Speaking</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container section animate-on-scroll">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card animate-on-scroll-child" style="animation-delay: 0.1s;">
+                    <img src="images/hospital-ease-login.png" alt="Hospital Ease Login Screen" class="project-image">
+                    <h3>Hospital Ease: Desktop Patient & Appointment Management</h3>
+                    <p>Developed 'Hospital Ease,' a user-friendly desktop application built with Python and Tkinter. This system is designed to modernize and streamline patient data and appointment management for hospital staff, aiming to significantly save time and improve the efficiency of daily administrative operations within a healthcare setting.</p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Secure user login and authentication.</li>
+                        <li>Comprehensive Patient Data Management (CRUD operations).</li>
+                        <li>Efficient Appointment Scheduling system.</li>
+                        <li>Intuitive GUI powered by Tkinter & data persistence with SQLite3.</li>
+                    </ul>
+                    <p><strong>Technologies:</strong> Python, Tkinter, SQLite3</p>
+                    <p><strong>Challenge:</strong> Designing an intuitive GUI with Tkinter for diverse users.</p>
+                    <p><strong>Solution:</strong> Iteratively refined UI layout, grouped functions logically, and used clear labels.</p>
+                    <p><strong>Learnings:</strong> Enhanced Python skills, GUI development with Tkinter, SQLite3 database design, user-centric design.</p>
+            
+                    <a href="https://github.com/jahnavikonatala21/HospitalEase" target="_blank" class="btn btn-primary"> GitHub Repo</a>
+                </article>
+
+                <article class="project-card animate-on-scroll-child" style="animation-delay: 0.2s;">
+                    <img src="images/lamborghini-landing-page.png" alt="Lamborghini Themed Landing Page" class="project-image">
+                    <img src="images/todo-list-app.png" alt="To-Do List App" class="project-image" style="margin-top:10px;">
+                    <h3>Octanet Internship: Web Development Showcase</h3>
+                    <p>During my web development internship at Octanet, I applied and expanded my front-end skills by creating a sleek, responsive landing page and a functional, stylish to-do list application. These projects emphasized modern design principles and user interactivity.</p>
+                    <h4>Part A: Responsive Landing Page (Lamborghini Theme)</h4>
+                    <p>Designed and developed a visually striking, responsive landing page concept, focusing on a high-end aesthetic and optimal viewing across devices.</p>
+                    <h4>Part B: Functional & Stylish To-Do List Web App</h4>
+                    <p>Created a functional to-do list web application with core task management features, incorporating modern UI techniques like glassmorphism.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                    <p><strong>Challenge:</strong> Achieving a high-fidelity modern aesthetic while ensuring responsiveness and implementing glassmorphism effectively.</p>
+                    <p><strong>Solution:</strong> Leveraged advanced CSS (Flexbox, Grid) and researched CSS properties for glassmorphism with cross-browser testing.</p>
+                    <p><strong>Learnings:</strong> Solidified front-end skills (HTML, CSS, JS), responsive design, modern UI/UX, DOM manipulation.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/jahnavikonatala21/LandingPage" target="_blank" class="btn btn-primary">Landing Page GitHub</a>
+                        <a href="https://github.com/jahnavikonatala21/TODO" target="_blank" class="btn btn-primary">To-Do List GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="container section animate-on-scroll">
+            <h2>My Journey: Experience</h2>
+            <div class="experience-timeline">
+                <!-- Item 1 (Left) -->
+                <div class="experience-item-container left-container animate-on-scroll-child">
+                    <div class="timeline-bubble"></div>
+                    <div class="experience-content">
+                        <h3>Machine Learning Intern</h3>
+                        <p class="company-date"><strong>SkillDzire</strong> | May 2024 – Jul 2024</p>
+                        <ul>
+                            <li>Completed modules on Machine Learning and applied concepts to develop projects based on coursework, focusing on predictive modeling and data analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 2 (Right) -->
+                <div class="experience-item-container right-container animate-on-scroll-child" style="animation-delay: 0.2s;">
+                    <div class="timeline-bubble"></div>
+                    <div class="experience-content">
+                        <h3>Web Development Intern</h3>
+                        <p class="company-date"><strong>Octanet Services Pvt.Ltd</strong> | Jun 2024 – Aug 2024</p>
+                        <ul>
+                            <li>Had hands-on experience building responsive websites, including a landing page and a To-do list application.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 3 (Left) -->
+                <div class="experience-item-container left-container animate-on-scroll-child" style="animation-delay: 0.3s;">
+                    <div class="timeline-bubble"></div>
+                    <div class="experience-content">
+                        <h3>Android Developer Intern</h3>
+                        <p class="company-date"><strong>EduSkills</strong> | Apr 2024 – Jun 2024</p>
+                        <ul>
+                            <li>Successfully completed Android Developer internship with hands-on experience in Android Studio and Kotlin, creating Android applications.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 4 (Right) -->
+                <div class="experience-item-container right-container animate-on-scroll-child" style="animation-delay: 0.4s;">
+                    <div class="timeline-bubble"></div>
+                    <div class="experience-content">
+                        <h3>AIML Intern</h3>
+                        <p class="company-date"><strong>EduSkills</strong> | Jan 2024 – Mar 2024</p>
+                        <ul>
+                            <li>Gained experience in AIML, learning and executing basic ML algorithms like Linear Regression for data analysis tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 5 (Left) -->
+                <div class="experience-item-container left-container animate-on-scroll-child" style="animation-delay: 0.5s;">
+                    <div class="timeline-bubble"></div>
+                    <div class="experience-content">
+                        <h3>Python Intern</h3>
+                        <p class="company-date"><strong>CodingRaja Technologies</strong> | Sept 2023 – Oct 2023</p>
+                        <ul>
+                            <li>Completed assigned tasks, including creating a to-do list application, demonstrating foundational Python skills.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Podcast Section -->
+        <section id="podcast" class="container section podcast-section animate-on-scroll">
+            <h2>Behind the Mic: Vishnu Podcast</h2>
+             <div class="podcast-content">
+                <img src="images/podcast-og-food.jpg" alt="Vishnu Podcast OG Food Episode" class="podcast-image animate-on-scroll-child" style="animation-delay: 0.1s;">
+                <div class="podcast-text animate-on-scroll-child" style="animation-delay: 0.2s;">
+                    <p>As a host for Vishnu Podcast (VPOD), I delve into a variety of engaging topics and connect with a diverse audience. This role has been instrumental in developing my communication, public speaking, research, and content structuring abilities.</p>
+                    <p>I believe these skills are crucial for effectively articulating complex ideas and fostering collaboration in any team environment.</p>
+                    <p>Listen to an episode I hosted where we discussed '#OG FOOD Ft.Gen Z':</p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2FQA1g7XsHtr1i0G89e66N?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="container section animate-on-scroll">
+            <h2>Achievements & Certifications</h2>
+            <ul class="achievements-list">
+                <li class="animate-on-scroll-child" style="animation-delay: 0.1s;"><i class="fas fa-trophy"></i> Active Participation in hackathons like WeForShe (Myntra), Flipkart Runway, Flipkart Grid 6.0</li>
+                <li class="animate-on-scroll-child" style="animation-delay: 0.2s;"><i class="fas fa-graduation-cap"></i> Selected as Scholar of Shefi Foundation 2024</li>
+                <li class="animate-on-scroll-child" style="animation-delay: 0.3s;"><i class="fas fa-certificate"></i> Certified for successful completion of CS109x: Introduction to Data Science with Python course, HarvardX (06/01/24)</li>
+                <li class="animate-on-scroll-child" style="animation-delay: 0.4s;"><i class="fas fa-certificate"></i> Selected as a member of Pragati: Path to Future Cohort-2 Program by Infosys SpringBoard</li>
+                <li class="animate-on-scroll-child" style="animation-delay: 0.5s;"><i class="fas fa-certificate"></i> Certified for Successful Completion of Online Course Data Structures in C, Great Learning Academy (04/01/23)</li>
+                <li class="animate-on-scroll-child" style="animation-delay: 0.6s;"><i class="fas fa-certificate"></i> Certified as a Smart Coder by Smart Interviews</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container section animate-on-scroll">
+            <h2>Let's Connect!</h2>
+            <p>I'm always excited to discuss new projects, opportunities, or just chat about tech. Feel free to reach out!</p>
+            <div class="contact-methods">
+                <a href="mailto:jahnavikonatala21@gmail.com" class="contact-link animate-on-scroll-child" style="animation-delay: 0.1s;"><i class="fas fa-envelope"></i> jahnavikonatala21@gmail.com</a>
+                <a href="https://www.linkedin.com/in/jahnavi-konatala-6a533a255/" target="_blank" class="contact-link animate-on-scroll-child" style="animation-delay: 0.2s;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/jahnavikonatala21" target="_blank" class="contact-link animate-on-scroll-child" style="animation-delay: 0.3s;"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <form id="contact-form" class="contact-form animate-on-scroll-child" style="animation-delay: 0.4s;" action="https://formspree.io/f/myzwowgp" method="POST">
+                <h3>Send me a message:</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="form-status" class="form-status-message" style="display: none;"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="currentYear"></span> Jahnavi Sri Harshita Konatala. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ADDED: Hamburger Menu Functionality
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-links');
+        const allNavLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]:not(.btn-resume)').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Close the mobile menu if it's open before scrolling
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Contact form handling (existing code)
+        const contactForm = document.getElementById('contact-form');
+        const formStatusDiv = document.getElementById('form-status');
+
+        if (contactForm && formStatusDiv) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const form = e.target;
+                const formData = new FormData(form);
+                const submitButton = form.querySelector('button[type="submit"]');
+                const formAction = form.getAttribute('action');
+
+                formStatusDiv.textContent = '';
+                formStatusDiv.className = 'form-status-message';
+                formStatusDiv.style.display = 'none';
+
+                if (!formAction || formAction === "YOUR_BACKEND_URL_OR_FORMSPREE_ENDPOINT" || formAction === "#") {
+                    formStatusDiv.textContent = 'Demo: Message would be sent here! Set up form endpoint.';
+                    formStatusDiv.classList.add('success');
+                    formStatusDiv.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => { formStatusDiv.style.display = 'none'; }, 5000);
+                    return;
+                }
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                try {
+                    const response = await fetch(formAction, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        formStatusDiv.textContent = 'Message sent successfully! Thank you.';
+                        formStatusDiv.classList.add('success');
+                        form.reset();
+                    } else {
+                        let errorMessage = 'Oops! There was a problem submitting your form.';
+                        try {
+                            const data = await response.json();
+                            if (data && data.errors) {
+                                errorMessage = data.errors.map(error => error.message || 'Unknown error').join(", ");
+                            } else if (data && data.error) {
+                                errorMessage = data.error;
+                            }
+                        } catch (parseError) {
+                            console.error("Could not parse error response:", parseError);
+                        }
+                        formStatusDiv.textContent = errorMessage;
+                        formStatusDiv.classList.add('error');
+                        console.error("Form submission error:", await response.text());
+                    }
+                } catch (error) {
+                    console.error('Network or other error submitting form:', error);
+                    formStatusDiv.textContent = 'An error occurred. Please try again later.';
+                    formStatusDiv.classList.add('error');
+                } finally {
+                    formStatusDiv.style.display = 'block';
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    setTimeout(() => {
+                        formStatusDiv.style.display = 'none';
+                        formStatusDiv.className = 'form-status-message';
+                    }, 7000);
+                }
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-child');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedElements.forEach(el => { observer.observe(el); });
+
+        // Active Navigation Link Highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main section[id]');
+        function changeNav() {
+            let index = sections.length;
+            const scrollPosition = window.scrollY + (window.innerHeight / 2.5);
+            while(--index >= 0 && scrollPosition < sections[index].offsetTop) {}
+            navLinks.forEach((link) => link.classList.remove('active'));
+            if (index >= 0 && sections[index]) { 
+                 const activeLink = document.querySelector(`.nav-link[href="#${sections[index].id}"]`);
+                 if (activeLink) activeLink.classList.add('active');
+            } else if (window.scrollY < (sections[0] ? sections[0].offsetTop : 0) ) {
+                const homeLink = document.querySelector('.nav-link[href="#hero"]');
+                if (homeLink) homeLink.classList.add('active');
+            }
+        }
+        if (sections.length > 0) {
+            changeNav();
+            window.addEventListener('scroll', changeNav);
+        }
+
+        // DYNAMIC TAGLINE SCRIPT
+        const taglineElement = document.getElementById('dynamic-tagline-text');
+        const roles = [
+            "Web Developer",
+            "Python developer",
+            "Aspiring Data Scientist",
+            "ML Enthusiast",
+            "Vishnu Podcast Host"
+        ];
+        let currentRoleIndex = 0;
+        const changeInterval = 3500;
+        const fadeDuration = 500;
+
+        function changeTagline() {
+            taglineElement.classList.remove('fade-in');
+            taglineElement.classList.add('fade-out');
+            setTimeout(() => {
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                taglineElement.textContent = roles[currentRoleIndex];
+                taglineElement.classList.remove('fade-out');
+                taglineElement.classList.add('fade-in');
+            }, fadeDuration);
+        }
+
+        setTimeout(() => {
+            taglineElement.classList.add('fade-in');
+            setInterval(changeTagline, changeInterval);
+        }, 400 + fadeDuration);
+
+    </script>
+</body>
+</html>
