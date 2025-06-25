@@ -65,12 +65,10 @@
         <!-- About Me Section -->
         <section id="about" class="container section animate-on-scroll">
             <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm Jahnavi, a third-year B.Tech student at Shri Vishnu Engineering College For Women, specializing in Artificial Intelligence and Data Science. My core focus is on leveraging Python, Machine Learning, and Data Structures to solve real-world problems that can make a tangible impact.</p>
-                    <p>Beyond coding and algorithms, I host the Vishnu Podcast (you can catch an episode further down!), an experience that has profoundly honed my communication, research, and presentation abilities. I believe that clear communication is key to translating complex technical insights into understandable concepts. I also enjoy expressing my creativity through drawing in my free time.</p>
-                    <p>I'm driven by a desire to apply my analytical abilities and collaborative spirit to create innovative solutions in the tech world. I'm currently seeking opportunities where I can contribute to impactful projects and continue to grow as a Data Science enthusiast.</p>
-                </div>
+            <div class="about-text">
+                <p>Hello! I'm Jahnavi, an AI and Machine Learning Engineer with a passion for building intelligent solutions to real-world problems. My recent experience as an intern at the **Microsoft Azure AI program** solidified my expertise in applying Natural Language Processing (NLP) to create data-driven applications.</p>
+                <p>I thrive on the entire development lifecycle, from designing algorithms in Python to deploying full-stack applications. My core technical skills are centered around Python, Scikit-learn, spaCy, and modern data science libraries.</p>
+                <p>Beyond coding, I host the Vishnu Podcast, an experience that has profoundly honed my ability to communicate complex technical ideas clearly. I'm driven to join a dynamic team where I can contribute to impactful projects and continue to grow as an engineer in the AI space.</p>
             </div>
         </section>
 
@@ -134,6 +132,53 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <article class="project-card animate-on-scroll-child" style="animation-delay: 0.1s;">
+                    <img src="images/iDetect.png" alt="iDetect Human Action Recognition App" class="project-image">
+                    <h3>iDetect: Human Action Recognition Web App</h3>
+                    <p>A full-stack web application that leverages a deep learning model (LSTM on ResNet features) to classify human actions from video clips in real-time. This project demonstrates end-to-end MLOps, from model training to deployment as an interactive web service.</p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Real-time video upload and classification.</li>
+                        <li>Flask backend serving the PyTorch model via a REST API.</li>
+                        <li>Modern, responsive frontend built with vanilla HTML, CSS, and JavaScript.</li>
+                        <li>Containerized for production using Docker and deployed on Hugging Face Spaces.</li>
+                    </ul>
+                    <p><strong>Technologies:</strong> Python, PyTorch, Flask, Docker, Hugging Face, HTML, CSS, JavaScript</p>
+                    <p><strong>Challenge:</strong> Deploying a complex Python backend with system dependencies and specific permissions in a production environment.</p>
+                    <p><strong>Solution:</strong> Architected a robust multi-stage Dockerfile that handled system dependencies (OpenCV), Python packages, file ownership, and cache management for a successful cloud deployment.</p>
+                    <p><strong>Learnings:</strong> MLOps, API development with Flask, Docker containerization, cloud deployment on Hugging Face, debugging server-side applications.</p>
+                    
+                    <div class="project-links">
+                        <a href="https://jahnavi21-idetect.hf.space/" target="_blank" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/jahnavikonatala21/iDetect" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+                    </div>
+                </article>
+
+                <article class="project-card animate-on-scroll-child" style="animation-delay: 0.1s;">
+                    <div class="project-card-body">
+                        <img src="images/Career-Core.png" alt="CareerCore Application Screenshot" class="project-image">
+                        
+                        <h3>CareerCore: AI-Powered Resume & Job Match Analyzer</h3>
+                        
+                        <p>The capstone project for my Microsoft AI Internship. CareerCore is a full-stack web application that uses Natural Language Processing to provide a deep analysis of how well a resume matches a job description, going far beyond simple keyword matching.</p>
+                        
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><strong>Dual-Analysis Engine:</strong> Uses spaCy for NER-based skill extraction and Sentence-Transformers for semantic context similarity.</li>
+                            <li><strong>Weighted Scoring:</strong> Generates a final match score and detailed skill-gap analysis.</li>
+                            <li><strong>Interactive UI:</strong> Built with Streamlit for a responsive and user-friendly experience.</li>
+                            <li><strong>Automated PDF Parsing:</strong> Extracts text directly from uploaded resume files.</li>
+                        </ul>
+                        
+                        <p><strong>Technologies:</strong> Python, Streamlit, spaCy, Sentence-Transformers, PyPDF2</p>
+                        <p><strong>Challenge:</strong> Combining two different AI outputs—a quantitative keyword match and a qualitative context score—into a single, intuitive, and meaningful result for the user.</p>
+                        <p><strong>Solution:</strong> Designed a weighted average formula that prioritizes semantic context (60%) over simple keyword presence (40%), reflecting a more human-like understanding of a candidate's relevance to a role.</p>
+                        <p><strong>Learnings:</strong> Gained practical experience in full-stack ML application development, applying advanced NLP techniques (NER, semantic search), and rapid prototyping with Streamlit to deliver a functional product.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jahnavikonatala21/CareerCore" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </article>
+                <article class="project-card animate-on-scroll-child" style="animation-delay: 0.1s;">
                     <img src="images/hospital-ease-login.png" alt="Hospital Ease Login Screen" class="project-image">
                     <h3>Hospital Ease: Desktop Patient & Appointment Management</h3>
                     <p>Developed 'Hospital Ease,' a user-friendly desktop application built with Python and Tkinter. This system is designed to modernize and streamline patient data and appointment management for hospital staff, aiming to significantly save time and improve the efficiency of daily administrative operations within a healthcare setting.</p>
@@ -149,7 +194,9 @@
                     <p><strong>Solution:</strong> Iteratively refined UI layout, grouped functions logically, and used clear labels.</p>
                     <p><strong>Learnings:</strong> Enhanced Python skills, GUI development with Tkinter, SQLite3 database design, user-centric design.</p>
             
-                    <a href="https://github.com/jahnavikonatala21/HospitalEase" target="_blank" class="btn btn-primary"> GitHub Repo</a>
+                    <div class="project-links">
+                        <a href="https://github.com/jahnavikonatala21/HospitalEase" target="_blank" class="btn btn-primary"> GitHub Repo</a>
+                    </div>
                 </article>
 
                 <article class="project-card animate-on-scroll-child" style="animation-delay: 0.2s;">
@@ -177,58 +224,50 @@
         <section id="experience" class="container section animate-on-scroll">
             <h2>My Journey: Experience</h2>
             <div class="experience-timeline">
-                <!-- Item 1 (Left) -->
+               
+                <!-- Item 1: Microsoft Internship -->
                 <div class="experience-item-container left-container animate-on-scroll-child">
+                    <div class="timeline-bubble"></div>
+                    <div class="experience-content">
+                        <h3>AI Development Intern</h3>
+                        <p class="company-date"><strong>Microsoft Azure AI (via Edunet)</strong> | May 2024 – Jun 2024</p>
+                        <ul>
+                            <li>Developed <strong>CareerCore</strong>, a full-stack NLP app, as the capstone project.</li>
+                            <li>Engineered a dual-analysis engine using spaCy and Sentence-Transformers.</li>
+                            <li>Designed and implemented a weighted scoring algorithm for resume analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 2: SkillDzire -->
+                <div class="experience-item-container right-container animate-on-scroll-child" style="animation-delay: 0.2s;">
                     <div class="timeline-bubble"></div>
                     <div class="experience-content">
                         <h3>Machine Learning Intern</h3>
                         <p class="company-date"><strong>SkillDzire</strong> | May 2024 – Jul 2024</p>
                         <ul>
-                            <li>Completed modules on Machine Learning and applied concepts to develop projects based on coursework, focusing on predictive modeling and data analysis.</li>
+                            <li>Applied ML concepts to develop projects, focusing on data processing with Pandas and model implementation with Scikit-learn.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Item 2 (Right) -->
-                <div class="experience-item-container right-container animate-on-scroll-child" style="animation-delay: 0.2s;">
-                    <div class="timeline-bubble"></div>
-                    <div class="experience-content">
-                        <h3>Web Development Intern</h3>
-                        <p class="company-date"><strong>Octanet Services Pvt.Ltd</strong> | Jun 2024 – Aug 2024</p>
-                        <ul>
-                            <li>Had hands-on experience building responsive websites, including a landing page and a To-do list application.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Item 3 (Left) -->
+                <!-- Item 3: EduSkills Android -->
                 <div class="experience-item-container left-container animate-on-scroll-child" style="animation-delay: 0.3s;">
                     <div class="timeline-bubble"></div>
                     <div class="experience-content">
                         <h3>Android Developer Intern</h3>
                         <p class="company-date"><strong>EduSkills</strong> | Apr 2024 – Jun 2024</p>
                         <ul>
-                            <li>Successfully completed Android Developer internship with hands-on experience in Android Studio and Kotlin, creating Android applications.</li>
+                            <li>Engineered an Android application using Kotlin and Android Studio, implementing key UI/UX features and business logic.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Item 4 (Right) -->
+                <!-- Item 4: EduSkills AIML -->
                 <div class="experience-item-container right-container animate-on-scroll-child" style="animation-delay: 0.4s;">
                     <div class="timeline-bubble"></div>
                     <div class="experience-content">
                         <h3>AIML Intern</h3>
                         <p class="company-date"><strong>EduSkills</strong> | Jan 2024 – Mar 2024</p>
                         <ul>
-                            <li>Gained experience in AIML, learning and executing basic ML algorithms like Linear Regression for data analysis tasks.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Item 5 (Left) -->
-                <div class="experience-item-container left-container animate-on-scroll-child" style="animation-delay: 0.5s;">
-                    <div class="timeline-bubble"></div>
-                    <div class="experience-content">
-                        <h3>Python Intern</h3>
-                        <p class="company-date"><strong>CodingRaja Technologies</strong> | Sept 2023 – Oct 2023</p>
-                        <ul>
-                            <li>Completed assigned tasks, including creating a to-do list application, demonstrating foundational Python skills.</li>
+                            <li>Implemented and trained a Linear Regression model using Python and Scikit-learn to analyze datasets and predict outcomes.</li>
                         </ul>
                     </div>
                 </div>
@@ -250,15 +289,56 @@
         </section>
 
         <!-- Achievements Section -->
+        
         <section id="achievements" class="container section animate-on-scroll">
             <h2>Achievements & Certifications</h2>
             <ul class="achievements-list">
-                <li class="animate-on-scroll-child" style="animation-delay: 0.1s;"><i class="fas fa-trophy"></i> Active Participation in hackathons like WeForShe (Myntra), Flipkart Runway, Flipkart Grid 6.0</li>
-                <li class="animate-on-scroll-child" style="animation-delay: 0.2s;"><i class="fas fa-graduation-cap"></i> Selected as Scholar of Shefi Foundation 2024</li>
-                <li class="animate-on-scroll-child" style="animation-delay: 0.3s;"><i class="fas fa-certificate"></i> Certified for successful completion of CS109x: Introduction to Data Science with Python course, HarvardX (06/01/24)</li>
-                <li class="animate-on-scroll-child" style="animation-delay: 0.4s;"><i class="fas fa-certificate"></i> Selected as a member of Pragati: Path to Future Cohort-2 Program by Infosys SpringBoard</li>
-                <li class="animate-on-scroll-child" style="animation-delay: 0.5s;"><i class="fas fa-certificate"></i> Certified for Successful Completion of Online Course Data Structures in C, Great Learning Academy (04/01/23)</li>
-                <li class="animate-on-scroll-child" style="animation-delay: 0.6s;"><i class="fas fa-certificate"></i> Certified as a Smart Coder by Smart Interviews</li>
+                
+                <li class="animate-on-scroll-child" style="animation-delay: 0.1s;">
+                    <i class="fas fa-trophy"></i>
+                    <a href="<link_for_microsoft_cert>" target="_blank">Certificate of Completion: <strong>Microsoft Azure AI Internship</strong></a>
+                </li>
+
+                <li class="animate-on-scroll-child" style="animation-delay: 0.2s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_dbms_cert>" target="_blank">Attained certification in <strong>Database Management Systems (NPTEL)</strong></a>
+                </li>
+                
+                <li class="animate-on-scroll-child" style="animation-delay: 0.3s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_os_cert>" target="_blank">Acquired expertise in <strong>Operating System Fundamentals (NPTEL)</strong></a>
+                </li>
+
+                <li class="animate-on-scroll-child" style="animation-delay: 0.4s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_harvardx_cert>" target="_blank">Certified in <strong>CS109x: Introduction to Data Science with Python (HarvardX)</strong></a>
+                </li>
+
+                <li class="animate-on-scroll-child" style="animation-delay: 0.5s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_dl_cert>" target="_blank">Introduction to <strong>Deep Learning (Infosys Springboard – Jul 2024)</strong></a>
+                </li>
+
+                <li class="animate-on-scroll-child" style="animation-delay: 0.6s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_ai_cert>" target="_blank">Introduction to <strong>Artificial Intelligence (Infosys Springboard – Jul 2024)</strong></a>
+                </li>
+
+                <li class="animate-on-scroll-child" style="animation-delay: 0.7s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_ml_cert>" target="_blank">Introduction to <strong>Machine Learning (Infosys Springboard – Jun 2024)</strong></a>
+                </li>
+                
+                <li class="animate-on-scroll-child" style="animation-delay: 0.8s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_py_crypto_cert>" target="_blank">Python Case Study - <strong>Cryptography (Infosys Springboard – Mar 2025)</strong></a>
+                </li>
+
+                <li class="animate-on-scroll-child" style="animation-delay: 0.9s;">
+                    <i class="fas fa-certificate"></i>
+                    <a href="<link_for_it_sec_cert>" target="_blank">Cryptography in <strong>IT Security Hacking (Infosys Springboard – Mar 2025)</strong></a>
+                </li>
+
             </ul>
         </section>
 
@@ -430,11 +510,11 @@
         // DYNAMIC TAGLINE SCRIPT
         const taglineElement = document.getElementById('dynamic-tagline-text');
         const roles = [
-            "Web Developer",
-            "Python developer",
-            "Aspiring Data Scientist",
-            "ML Enthusiast",
-            "Vishnu Podcast Host"
+            "AI & ML Engineer",
+            "NLP Developer",
+            "Data Scientist",
+            "Python Developer",
+            "Vishnu Podcast Host" // This is a great, unique personal brand item!
         ];
         let currentRoleIndex = 0;
         const changeInterval = 3500;
